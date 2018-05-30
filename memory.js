@@ -3,14 +3,10 @@ var chart = null;
 
 
 function getMemoryUsage(){
-    freeMemo = os.freemem();
-    totalMemo = os.totalmem();
-    usingMemo = totalMemo - freeMemo;
-
-    return [
-        freeMemo,
-        usingMemo
-    ]
+  return [
+    os.freemem(),
+    os.totalmem() - os.freemem(),   
+  ];
 }
 
 
@@ -28,8 +24,8 @@ function getDataSets(){
 }
 
 function updateDatasets(){
-    chart.data.datasets[0].data = os.freemem();
-    chart.data.datasets[1].data = os.totalmem() - os.freemem();
+    chart.data.datasets[0].data = getMemoryUsage()[0];
+    chart.data.datasets[1].data = getMemoryUsage()[1];
 
     chart.update();
 }

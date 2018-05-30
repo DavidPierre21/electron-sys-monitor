@@ -25,7 +25,7 @@ function getDatasets() {
     }
     datasets.push(cpuData)
   }
-  testCpus = os.cpus();
+  // testCpus = os.cpus();
   return datasets;
 }
 

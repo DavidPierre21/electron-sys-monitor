@@ -9,7 +9,7 @@ app.once('ready', () => {
   // Create a new window
   window = new BrowserWindow({
     // Set the initial width to 1200px
-    width: 1200,
+    width: 1000,
     // Set the initial height to 800px
     height: 800,
     // set the title bar style
