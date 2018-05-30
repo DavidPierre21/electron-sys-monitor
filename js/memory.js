@@ -35,8 +35,8 @@ function drawChart() {
       type: 'doughnut',
       data: {
         labels: [
-          'Free Memory (Bytes)',
-          'Used Memory (Bytes)'
+          'Used Memory (Bytes)',
+          'Free Memory (Bytes)'
         ],
         datasets: getDataSets()
       },
