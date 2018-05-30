@@ -27,7 +27,7 @@ app.once('ready', () => {
   }))
 
   window.once('ready-to-show', () => {
-    window.setMenu(null)
+    // window.setMenu(null)
     window.show()
   })
 })
