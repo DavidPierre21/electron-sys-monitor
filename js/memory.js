@@ -5,7 +5,7 @@ var chart = null;
 function getMemoryUsage(){
   return [
     os.freemem(),
-    os.totalmem() - os.freemem(),   
+    (os.totalmem() - os.freemem()),   
   ];
 }
 
@@ -25,7 +25,7 @@ function getDataSets(){
 
 function updateDatasets(){
     chart.data.datasets.data[0] = os.freemem();
-    chart.data.datasets.data[1] = os.totalmem() - os.freemem();
+    chart.data.datasets.data[1] = (os.totalmem() - os.freemem());
 
     chart.update();
 }
